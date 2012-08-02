@@ -8,7 +8,7 @@ Here's an example, which reads a file into an array and then displays it using s
 
 $arr = file('example.txt') or die('ERROR: Cannot find file');
 foreach ($arr as $line) {
-	echo $line;
+	// echo $line;
 }
 
 
@@ -23,11 +23,34 @@ echo "<br />";
 echo "above this is the 5th line of the file";
 */
 
+
+
 $arr2 = file('example2.txt') or die('ERROR: Cannot find file');
 foreach ($arr2 as $line2) {
-	echo $line2;
+	//echo $line2;
+}
 
-/* Compar the 2 arrays */
+/* Compare the 2 arrays */
+/*
+echo "<br />";
+echo "<br />";
+echo "Here are the differences between the 2 arrays";
+echo "<br />";
+echo "<br />";
+*/
+
+/*
+$result = array_intersect($arr, $arr2);
+*/
+
+/*
+	This returns an array containing all of the entries from array1 ($arr) that are not present in any other arrays ($arr2)
+*/
+
+$result = array_diff($arr, $arr2);
+
+print_r($result);
+
 
 
 
